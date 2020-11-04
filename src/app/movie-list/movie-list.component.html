@@ -1,0 +1,26 @@
+<div class="movies">
+  <input
+    class="movies__input"
+    type="text"
+    placeholder="Search Movies"
+    [(ngModel)]="search"
+    (keyup)="onInput()"
+  />
+  <hr class="movies__hr" />
+  <p class="movies__heading">Popular movies this month</p>
+  <div class="columns is-multiline">
+    <div
+      class="column is-two-thirds-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd unique"
+      *ngFor="let item of moviesList"
+    >
+      <div class="movies__card" [id]="item.id" (click)="onCardClick(item.id)">
+        <img class="movies__card-img" [src]="item.imgPath" />
+        <h2 class="movies__card-title">{{ item.name }}</h2>
+        <p class="movies__card-duration">{{ item.duration }} min</p>
+        <p class="movies__card-rating">
+          User Rating:&nbsp; {{ item.userRating }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

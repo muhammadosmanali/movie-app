@@ -1,0 +1,28 @@
+<div class="detail">
+  <button class="detail__btn" routerLink="/">Back</button>
+  <p class="detail__name">{{ movie.name }}</p>
+  <p class="detail__mparating">
+    ( {{ movie.mpaaRating.type + ": " + movie.mpaaRating.label }} )
+  </p>
+  <hr class="detail__hr" />
+
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <img [src]="movie.imgPath" />
+    </div>
+    <div class="column is-three-quarters">
+      <p class="detail__heading">Details</p>
+      <p class="detail__genres">Genre:</p>
+      <div *ngFor="let item of movie.genre">
+        <p class="detail__genre">{{ item }}</p>
+      </div>
+      <br /><br />
+      <p class="detail__lang">Language: {{ movie.language }}</p>
+      <p class="detail__duration">Duration: {{ movie.duration }}</p>
+      <p class="detail__rating">User Rating: {{ movie.userRating }}</p>
+
+      <p class="detail__heading mt">Synopsis</p>
+      <p class="detail__description">{{ movie.description }}</p>
+    </div>
+  </div>
+</div>

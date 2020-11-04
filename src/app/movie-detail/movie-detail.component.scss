@@ -1,0 +1,66 @@
+.detail {
+  &__btn {
+    padding: 0.2rem 0.8rem;
+    font-family: inherit;
+    outline-color: lightcyan;
+  }
+
+  &__name,
+  &__mparating {
+    margin-top: 1rem;
+    font-weight: 700;
+  }
+
+  &__name {
+    font-size: 2.2rem;
+  }
+
+  &__mparating {
+    font-size: 1.3rem;
+  }
+
+  &__hr {
+    color: lavender;
+    margin: 1.5rem 0;
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  &__genres,
+  &__genre {
+    float: left;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+  }
+
+  &__genre {
+    margin-left: .5rem;
+  }
+
+  &__duration,
+  &__lang,
+  &__rating {
+    font-size: 1.5rem;
+  }
+
+  &__lang {
+    margin-top: .6rem;
+  }
+
+  &__duration,
+  &__rating {
+    margin-top: .9rem;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+}
+
+.mt {
+  margin-top: 4rem;
+}
